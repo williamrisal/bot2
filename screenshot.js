@@ -1,6 +1,10 @@
 const puppeteer = require("puppeteer")
 const num = '0699766246'
 const { exec } = require("child_process");
+var d = new Date();
+var hours = d.getHours();
+var second = d.getSeconds();
+var minute = d.getMinutes();
 command = "./pushbullet.sh Crédit '"
 
 const getData = async () =>{
@@ -12,8 +16,7 @@ const getData = async () =>{
     const selector_body = await page.$x("/html/body/div[1]/div[2]/div/div[1]/div[3]/div[1]/span[1]");
     const tmp = text
     text = await page.evaluate(e => e.textContent, selector_body[0]);
-    if (tmp == text){}
-      else {
+    if (tmp != text | (hours == 9 & second == 0 & minute == 0)){
       exec(command.concat(text).concat("'"), (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
