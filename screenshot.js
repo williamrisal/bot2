@@ -1,12 +1,12 @@
 const puppeteer = require("puppeteer")
 const num = '0699766246'
 const { exec } = require("child_process");
-var d = new Date();
 command = "./pushbullet.sh Crédit '"
 
 const getData = async () =>{
   text = ""
   while (1){
+    var d = new Date();
     var hours = d.getHours();
     var second = d.getSeconds();
     var minute = d.getMinutes();
