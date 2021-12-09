@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer")
-const num = '0699766246'
+const num = '06**'
 const { exec } = require("child_process");
 command = "./pushbullet.sh Crédit '"
 
@@ -12,7 +12,7 @@ const getData = async () =>{
     var minute = d.getMinutes();
     const browser = await puppeteer.launch({ headless: true, slowMo: 150})
     const page = await browser.newPage()
-    await page.goto("https://intra.epitech.eu/auth-1bb7d152410cf813bb1df7d5a5b80e24eceac31e")
+    await page.goto("https://intra.epitech.eu/auth-***")
     const selector_body = await page.$x("/html/body/div[1]/div[2]/div/div[1]/div[3]/div[1]/span[1]");
     const tmp = text
     text = await page.evaluate(e => e.textContent, selector_body[0]);
