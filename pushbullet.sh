@@ -8,7 +8,7 @@
 # v1.0 send by pushbullet
 
 providerApi='https://api.pushbullet.com/v2/pushes'
-accessToken='o.v5t8c8JJPIbUjsxOl1vxj7bixIxMqE4D'
+accessToken='o.*'
 
 
 #send push notification with pushbullet
